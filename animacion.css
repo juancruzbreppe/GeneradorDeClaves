@@ -7,6 +7,7 @@ html{
   overflow: hidden;
 }
 body{
+  position: relative;
   height: calc(100vh - 8em);
   padding: 4em;
   color: rgba(255,255,255,.75);
@@ -29,9 +30,9 @@ body{
 }
 
 h6{
-  position: absolute;
-  top: 22%;
-  margin-left: 15.4%;
+  position: relative;
+  top: -10%;
+  margin-left: -11%;
 }
 /* Animation */
 .anim-typewriter{
