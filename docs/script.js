@@ -48,4 +48,3 @@ function randomClave(){
 }
 
 
-boton.onclick = function(){randomClave()};
