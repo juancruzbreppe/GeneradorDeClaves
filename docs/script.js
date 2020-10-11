@@ -4,7 +4,9 @@ var texto = document.getElementById("t");
 
 
 function randomClave(){
-  document.getElementById("t").innerHTML = '';
+  
+  
+  texto.innerHTML = '';
     var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
     var c = document.getElementById("numC");
     valor = c.value;
@@ -45,6 +47,9 @@ function randomClave(){
     var txt = clave();
     var container = document.getElementById("t");
 
+    boton.disabled = true;
+    setTimeout(function(){boton.disabled = false;},(100*txt.length));
+    
     function animacion(){
       if(k< txt.length){
         container.innerHTML += txt.charAt(k);
