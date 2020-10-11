@@ -2,6 +2,7 @@ var boton = document.getElementById("b");
 var texto = document.getElementById("t");
 
 
+
 function randomClave(){
   document.getElementById("t").innerHTML = '';
     var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
@@ -38,13 +39,40 @@ function randomClave(){
 
         return x;
     }
+
     
-    texto.classList.remove("line-1","anim-typewriter");
-    void texto.offsetWidth;
-    void texto.offsetHeight;
-    texto.classList.add("line-1","anim-typewriter");
-    document.getElementById("t").innerHTML = clave();
+    var k=0;
+    var txt = clave();
+    var container = document.getElementById("t");
+
+    function animacion(){
+      if(k< txt.length){
+        container.innerHTML += txt.charAt(k);
+        k++;
+        setTimeout(animacion,100);
+      }
+    }
+    
+    animacion();
+
+    
+      
     
 }
+
+function submitPoll(){
+  boton.disabled = true;
+  setTimeout(function(){boton.disabled = false;},2700);
+}
+submitPoll();
+
+
+const text = baffle('.claveSeg');
+    text.set({
+      characters : 'qwertyuiopasdfghjklzxcvbnm1234567890!"#$%&/()=?¡¿/*-+',
+      speed: 100
+    });
+    text.start();
+    text.reveal(2700);
 
 
