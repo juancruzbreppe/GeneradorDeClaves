@@ -1,10 +1,10 @@
 var boton = document.getElementById("b");
 var texto = document.getElementById("t");
-
+var guardar = document.getElementById("save");
 
 
 function randomClave(){
-  
+  guardar.style.visibility= "visible";
   
   texto.innerHTML = '';
     var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
@@ -59,6 +59,13 @@ function randomClave(){
     }
     
     animacion();
+    var fileName = 'Clave segura.txt';
+var fileContent = "Tu nueva clave segura es: "+txt+"\n\nGuardala bien, segui las recomendaciones de la pagina.\n\nSaludos!";
+var myFile = new Blob([fileContent], {type: 'text/plain'});
+    window.URL = window.URL || window.webkitURL;
+
+    document.getElementById('download').setAttribute('href', window.URL.createObjectURL(myFile));
+    document.getElementById('download').setAttribute('download', fileName);
 
     
       
@@ -79,5 +86,6 @@ const text = baffle('.claveSeg');
     });
     text.start();
     text.reveal(2700);
+
 
 

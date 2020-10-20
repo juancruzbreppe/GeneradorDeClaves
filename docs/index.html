@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de claves</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="script" href="js/bootstrap.js">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="script" href="js/bootstrap.min.js">
     <link rel="stylesheet" href="animacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="script" href="glitch.js">
     <link rel="icon" type="image/png" href="img/icon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
-    
 </head>
 <body>
-
+<div id="navegador">
+        <ul >
+            <li><a href="#sec1">Generar contraseña</a></li>
+            <li><a href="#sec2">Porque es segura?</a></li>
+            <li><a href="#sec3">Como guardarla?</a></li>
+            <li><a href="#sec4">Como hacer que no te roben contraseñas</a></li>
+        </ul>
+</div>
+<div class="main" id="sec1">
     <br>
     <div class="wrap"> <button type="button" class="button" id="b" onclick="randomClave()">Generar</button>
        
@@ -34,13 +42,45 @@
     <option value="19">19</option>
     <option value="20">20</option>
     </select></div>  <h6>N° de caracteres</h6> </div>
+    <h1 id="t" class="claveSeg">Genere su contraseña segura!</h1> 
     <br>
     <br>
-    <br>
-    <br>
-    <h1 id="t" class="claveSeg">Genere su contraseña segura!</h1>
+
+    <a href="" id="download"> <i id="save"> <i class="fa fa-download"></i>  Guardar clave</i></a>
     
-    
+
+
+</div>
+<div class="main" id="sec2">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, possimus.</p>
+</div>
+<div class="main" id="sec3">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, possimus.</p>
+</div>
+<div class="main" id="sec4">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, possimus.</p>
+    <footer>
+        <a href="#sec1">Volver a generar una contraseña</a>
+    </footer>
+</div>
     <script src="script.js"></script>
 </body>
 </html>
