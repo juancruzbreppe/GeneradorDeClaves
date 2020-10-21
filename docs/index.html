@@ -6,54 +6,61 @@
     <title>Generador de claves</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="script" href="js/bootstrap.min.js">
-    <link rel="stylesheet" href="animacion.css">
+    <link rel="stylesheet" href="css/animacion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="script" href="glitch.js">
+    <link rel="script" href="js/glitch.js">
     <link rel="icon" type="image/png" href="img/icon.png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
 </head>
 <body>
-<div id="navegador">
+    <div id="navegador">
         <ul >
             <li><a href="#sec1">Generar contraseña</a></li>
             <li><a href="#sec2">¿Por qué es segura?</a></li>
             <li><a href="#sec3">¿Cómo guardarla?</a></li>
             <li><a href="#sec4">¿Cómo evitar el robo de contraseñas?</a></li>
         </ul>
-</div>
+    </div>
 
-<div class="main" id="sec1">
-    <br>
-    <h6>N° de caracteres</h6>
-    <div class="wrap"> <button type="button" class="button" id="b" onclick="randomClave()">Generar</button>
+    <div class="main" id="sec1">
+        <br>
         
-    <div class="selectdiv"> <select name="items" id="numC"> 
+        <div class="contenedor"> 
+            <h6>N° de caracteres</h6>
+            <button type="button" class="button" id="btn" onclick="obtenerClave()">Generar</button>
+        
+            <div class="selectdiv"> 
+                <select name="items" id="numeroCaracteres"> 
 
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
-    <option value="11">11</option>
-    <option value="12">12</option>
-    <option value="13">13</option>
-    <option value="14">14</option>
-    <option value="15">15</option>
-    <option value="16">16</option>
-    <option value="17">17</option>
-    <option value="18">18</option>
-    <option value="19">19</option>
-    <option value="20">20</option>
-    </select></div>   </div>
-    <h1 id="t" class="claveSeg">Genere su contraseña segura!</h1> 
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+
+                </select>
+            </div>   
+        </div>
+    <h1 id="textoClave" class="claveSeg">Genere su contraseña segura!</h1> 
+
     <br>
     <br>
 
     <a href="" id="download"> <i id="save"> <i class="fa fa-download"></i>  Guardar clave</i></a>
     
-
-
 </div>
+
 <a href="#" class="btn-flotante">Generar una contraseña segura</a>
+
 <div class="main" id="sec2">
     <br>
     <br>
@@ -64,10 +71,9 @@
         *No contiene información personal del usuario. <br>
         *Contiene <b>al menos</b> 8 caracteres. <br>
         *Es significativamente diferente de contraseñas anteriores.
-
     </div>
-    
 </div>
+
 <div class="main" id="sec3">
     <br>
     <br>
@@ -78,12 +84,10 @@
         *Descargar un programa de gestor de contraseñas, de esta manera se guarda de forma totalmente segura y encriptada. <br>
         *Escribir la contraseña en un papel, pero NO tenerla a la vista, es decir, guardarlo en algun lugar secreto que recuerdes. <br>
         *En lo posible (según el tipo de cuenta) tener siempre activa la autenticación de 2 pasos. 
-
     </div>
 </div>
+
 <div class="main" id="sec4">
-    <br>
-    <br>
     <br>
     <br>
     <div class="caja">
@@ -92,15 +96,16 @@
         *Cada vez que estes por entrar a alguna pagina que tengas que entrar con un usario, corrobora que el link sea el correcto. Un ejemplo: www.twiter.com ESTA MAL ESCRITO, NO ES LA PAGINA OFICIAL (Por experiencia propia, he ingresado a una copia de la pagina de steam y me han robado mi cuenta, todo por no fijarme el link de la pagina donde ingrese). <br>
         *Intenta tener distintas contraseñas para las distintas cuentas que tengas. <br>
         *Una buena practica es cambiar la contraseña al menos una vez al año. <br>
-        *NO ENVIES DATOS PERSONALES POR MAIL, mucha gente suele caer en estas trampas, en la cual te mandan un mail pidiendo que confirmes información, a estos mails SOLO se debe responder si su dominio es DISTINTO a @gmail.com, las empresas tienen sus propios dominios, ejemplo: pedro@mercadolibre.com.ar .
+        *NO ENVIES DATOS PERSONALES POR MAIL, mucha gente suele caer en estas trampas, en la cual te mandan un mail pidiendo que confirmes información, a estos mails SOLO se debe responder si su dominio es DISTINTO a @gmail.com, las empresas tienen sus propios dominios, ejemplo: pedro@mercadolibre.com.ar . <br>
+        *Corroborar si el link de la pagina donde pondremos nuestros datos, comienza con <b>HTTPS</b>, y no con HTTP, y además, que tenga el certificado de seguridad (esto en la barra donde esta escrito el link).
     </div>
 </div>
+
 <br>
 <br>
 
 <footer id="footer">
     <ul>
-        
         <li><a href="mailto:juancruzbreppe@gmail.com" target="_blank">Email</a></li>
         <li><a href="https://github.com/juancruzbreppe" target="_blank">Github</a></li>
         <li><a href="https://www.linkedin.com/in/juan-cruz-breppe-3417261ab/" target="_blank">Linkedin</a></li>
@@ -110,7 +115,8 @@
         </li>
     </ul>
 </footer>
-    <script src="script.js"></script>
+
+<script src="js/script.js"></script>
 </body>
 </html>
 

@@ -1,92 +1,34 @@
-/* Google Fonts */
+/* Fuente de Google - Google Fonts*/
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-/* Global */
+
 html{
   min-height: 100%;
   overflow: scroll 1;
   scroll-behavior: smooth;
 }
+
 body{
   position: relative;
-  height: 100vh;
-  padding: 4em;
+  height: 100%;
+  padding: 4%;
   color: rgba(255,255,255,.75);
   font-family: 'Anonymous Pro', monospace;  
   background-color: rgb(25,25,25);  
   text-align: center;
 }
 
-.caja{
-  position: relative;
-  color: #ffffff; 
-  top: 18vh;
-font-size: 23px; 
-font-weight: 400; 
-text-align: justify; 
-background: #0C204E; 
-margin: 70px 70px 250px ; 
-overflow: hidden; 
-padding: 40px; 
-border-radius: 35px 0px 35px 0px; 
--moz-border-radius: 35px 0px 35px 0px; 
--webkit-border-radius: 35px 0px 35px 0px; 
-border: 2px solid #5878ca;
-}
 
-#footer ul{
-  display: inline-grid;
-  
-  list-style-type: none;
-  grid-auto-flow: row;
-  grid-gap: 24px;
-  justify-items: center;
-  margin: auto;
-}
-@media (min-width: 500px) {
-  #footer ul {
-    grid-auto-flow: column;
-  }
-}
-#footer a {
-  color: white;
-  text-decoration: none;
-  box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
-}
-
-#footer a:hover {
-  box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
-}
-#footer li:last-child {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-#footer li:hover ~ li p {
-  animation: wave-animation 0.3s infinite;
-}
-@keyframes wave-animation {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(20deg);
-  }
-  75% {
-    transform: rotate(-15deg);
-  }
-}
-
+/* Boton flotante que aparece por debajo a la derecha - Float button that is at the bottom right */
 .btn-flotante {
-	font-size: 16px; /* Cambiar el tamaño de la tipografia */
-	text-transform: uppercase; /* Texto en mayusculas */
-	font-weight: bold; /* Fuente en negrita o bold */
-	color: #ffffff; /* Color del texto */
-	border-radius: 5px; /* Borde del boton */
-	letter-spacing: 2px; /* Espacio entre letras */
-	background-color: #0C204E; /* Color de fondo */
-	padding: 18px 30px; /* Relleno del boton */
+	font-size: 16px;
+	text-transform: uppercase; 
+	font-weight: bold; 
+	color: #ffffff; 
+	border-radius: 5px; 
+	letter-spacing: 2px; 
+	background-color: #0C204E; 
+	padding: 18px 30px; 
 	position: fixed;
 	bottom: 40px;
 	right: 40px;
@@ -95,12 +37,14 @@ border: 2px solid #5878ca;
   z-index: 99;
   border: 2px solid #5878ca;
 }
+
 .btn-flotante:hover {
   background-color: #4FD1C5; /* Color de fondo al pasar el cursor */
   color: #000000;
 	box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
 	transform: translateY(-7px);
 }
+
 @media only screen and (max-width: 600px) {
  	.btn-flotante {
 		font-size: 14px;
@@ -109,18 +53,35 @@ border: 2px solid #5878ca;
 		right: 20px;
 	}
 }
+
+
+/* Botones que aparecen en el header - Buttons that is in the header */
 #navegador ul{
   margin-top: -25px;
   list-style-type: none;
   text-align: center;
   font-size: large;
 }
+
 #navegador li{
   display: inline;
   text-align: center;
   margin: 0 15px 0 0;
+}
+
+@media all and (max-width: 1200px) {
+  #navegador li {
+      display: list-item;
+      padding:5px;
+  }
+
+  h6{
+    left: 41%;
+    margin-top: 9%;
+  }
   
 }
+
 #navegador li a {
   padding: 2px 7px 2px 7px;
   color: #eeeeee;
@@ -131,53 +92,21 @@ border: 2px solid #5878ca;
   transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
   box-shadow: 5px 5px 15px #494949;
 }
+
 #navegador li a:hover{
   background-color: #ffffff;
   color: #333333;
   box-shadow: 0px 0px 0px rgb(25,25,25);
 }
 
-#save{
-  visibility: hidden;
-  padding: 10px;
-  font-size: medium;
-  color: #eeeeee;
-  background-color: rgb(25,25,25);
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
-}
 
-#save:hover{
-  background-color: #ffffff;
-  color: #333333;
-  box-shadow: 0px 0px 0px rgb(25,25,25);
-}
-
-a:link, a:visited, a:active {
-  text-decoration:none;
-}
-
-h6{
-  position: relative;
-  top: 27vh;
-  margin-left: 18%;
-}
-
-.wrap {
+/* Aqui van el contenedor de los elementos de la pantalla principal, y sus respectivos elementos, como el boton, combobox, etc. -
+  Here is the design for the container and its elements , like the button, combobox, etc. */
+.contenedor {
   height: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#sec1{
-height: 100vh;
-}
-
-#sec2{
-height: 100vh;
 }
 
 .button {
@@ -199,10 +128,10 @@ height: 100vh;
   outline: none;
   position: relative;
   padding: 10px;
-  }
+}
 
 button::before {
-content: '';
+  content: '';
   border-radius: 1000px;
   min-width: calc(300px + 12px);
   min-height: calc(60px + 12px);
@@ -245,16 +174,13 @@ button:hover::after, button:focus::after {
 
 .selectdiv {
   position: relative;
-  /*Don't really need this just for demo styling*/
   float: left;
   min-width: 180px;
   margin: 10px;
 }
 
-/* IE11 hide native button (thanks Matt!) */
 select::-ms-expand {
-display: none;
-
+  display: none;
 }
 
 select{
@@ -270,14 +196,10 @@ select{
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  right: 11px;
-  /*Adjust for position however you want*/
-  
+  right: 11px;  
   top: 18px;
   padding: 0 0 2px;
   border-bottom: 1px solid #999;
-  /*left line */
-  
   position: absolute;
   pointer-events: none;
 }
@@ -286,8 +208,6 @@ select{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  /* Add some styling */
-  
   display: block;
   width: 100%;
   max-width: 320px;
@@ -305,7 +225,23 @@ select{
   word-break: normal;
 }
 
+h6{
+  position: absolute;
+  top: 8.6%;
+  margin-left: 16.5%;
+}
 
+/* Aca acomodo un poco el h6 - Here i accommodate the h6 */
+@media all and (max-width: 1650px) and (min-width: 1200px) {
+
+  h6{
+    margin-top: -2%;
+    left: 39%;
+  }
+  
+}
+
+/* Animacion para el anillo del boton central - Animation of the ring of the central button */
 @keyframes ring {
   0% {
     width: 30px;
@@ -320,23 +256,121 @@ select{
 }
 
 
-*::-webkit-scrollbar {
-  width: 8px;     /* Tamaño del scroll en vertical */
-  height: 8px;    /* Tamaño del scroll en horizontal */
-  display: none;  /* Ocultar scroll */
+/* Boton para guardar la clave - Button for save de password */
+#save{
+  visibility: hidden;
+  padding: 10px;
+  font-size: medium;
+  color: #eeeeee;
+  background-color: rgb(25,25,25);
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+#save:hover{
+  background-color: #ffffff;
+  color: #333333;
+  box-shadow: 0px 0px 0px rgb(25,25,25);
+}
+
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
+
+
+/* Las 4 secciones de la pagina - The 4 sections of the page */
+#sec1,#sec2,#sec3,#sec4{
+  height: 100vh;
+}
+
+
+/* Cajas donde va el texto con información - Boxes where the information goes */
+.caja{
+  position: relative;
+  color: #ffffff; 
+  top: 18vh;
+  font-size: 23px; 
+  font-weight: 400; 
+  text-align: justify; 
+  background: #0C204E; 
+  margin: 70px 70px 70px ; 
+  overflow: hidden; 
+  padding: 40px; 
+  border-radius: 35px 0px 35px 0px; 
+  -moz-border-radius: 35px 0px 35px 0px; 
+  -webkit-border-radius: 35px 0px 35px 0px; 
+  border: 2px solid #5878ca;
+}
+
+
+/* Se establece un tamaño a la barra de desplazamiento y se oculta, tambien se le cambia otras propiedades - Scroll bar is resized and hidden, other properties are also changed */
+*::-webkit-scrollbar {
+  width: 8px;     
+  height: 8px;    
+  display: none;  
+}
+
 *::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 4px;
 }
-/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+
 *::-webkit-scrollbar-thumb:hover {
   background: #b3b3b3;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
 }
-/* Cambiamos el fondo cuando esté en active */
+
 *::-webkit-scrollbar-thumb:active {
   background-color: #999999;
+}
+
+
+/* Footer */
+#footer ul{
+  display: inline-grid;
+  list-style-type: none;
+  grid-auto-flow: row;
+  grid-gap: 24px;
+  justify-items: center;
+  margin: auto;
+}
+
+@media (min-width: 500px) {
+  #footer ul {
+    grid-auto-flow: column;
+  }
+}
+
+#footer a {
+  color: white;
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+}
+
+#footer a:hover {
+  box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+}
+
+#footer li:last-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#footer li:hover ~ li p {
+  animation: wave-animation 0.3s infinite;
+}
+
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
 }
