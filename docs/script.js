@@ -59,7 +59,7 @@ function randomClave(){
     }
     
     animacion();
-    var fileName = 'Clave segura.txt';
+    var fileName = 'Clave segura(CAMBIAR NOMBRE).txt';
 var fileContent = "Tu nueva clave segura es: "+txt+"\n\nGuardala bien, segui las recomendaciones de la pagina.\n\nSaludos!";
 var myFile = new Blob([fileContent], {type: 'text/plain'});
     window.URL = window.URL || window.webkitURL;
@@ -86,6 +86,8 @@ const text = baffle('.claveSeg');
     });
     text.start();
     text.reveal(2700);
+
+
 
 
 

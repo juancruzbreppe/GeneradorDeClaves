@@ -17,15 +17,17 @@
 <div id="navegador">
         <ul >
             <li><a href="#sec1">Generar contraseña</a></li>
-            <li><a href="#sec2">Porque es segura?</a></li>
-            <li><a href="#sec3">Como guardarla?</a></li>
-            <li><a href="#sec4">Como hacer que no te roben contraseñas</a></li>
+            <li><a href="#sec2">¿Por qué es segura?</a></li>
+            <li><a href="#sec3">¿Cómo guardarla?</a></li>
+            <li><a href="#sec4">¿Cómo evitar el robo de contraseñas?</a></li>
         </ul>
 </div>
+
 <div class="main" id="sec1">
     <br>
+    <h6>N° de caracteres</h6>
     <div class="wrap"> <button type="button" class="button" id="b" onclick="randomClave()">Generar</button>
-       
+        
     <div class="selectdiv"> <select name="items" id="numC"> 
 
     <option value="8">8</option>
@@ -41,7 +43,7 @@
     <option value="18">18</option>
     <option value="19">19</option>
     <option value="20">20</option>
-    </select></div>  <h6>N° de caracteres</h6> </div>
+    </select></div>   </div>
     <h1 id="t" class="claveSeg">Genere su contraseña segura!</h1> 
     <br>
     <br>
@@ -51,36 +53,63 @@
 
 
 </div>
+<a href="#sec1" class="btn-flotante">Generar una contraseña segura</a>
 <div class="main" id="sec2">
     <br>
     <br>
-    <br>
-    <br>
-    <br>
+    <div class="caja">
+        <h4><u>La contraseña generada anteriormente es totalmente segura porque:</u></h4> <br> 
+        *Es un conjunto de caracteres elegidos totalmente al azar (Entre: Mayúsculas, minúsculas, números y caracteres especiales). <br>
+        *No contiene palabras que aparezcan en el diccionario. <br>
+        *No contiene información personal del usuario. <br>
+        *Contiene <b>al menos</b> 8 caracteres. <br>
+        *Es significativamente diferente de contraseñas anteriores.
 
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, possimus.</p>
+    </div>
+    
 </div>
 <div class="main" id="sec3">
     <br>
     <br>
-    <br>
-    <br>
-    <br>
+    <div class="caja">
+        <h4><u>Recomendaciones sobre como guardar una contraseña de este estilo:</u></h4> <br> 
+        *No guardar el archivo con la contraseña en el escritorio y/o con un nombre descriptivo. <br>
+        *Guardar el archivo .txt con un nombre que recuerdes o, en su lugar, en una carpeta en especifico que recuerdes. <br>
+        *Descargar un programa de gestor de contraseñas, de esta manera se guarda de forma totalmente segura y encriptada. <br>
+        *Escribir la contraseña en un papel, pero NO tenerla a la vista, es decir, guardarlo en algun lugar secreto que recuerdes. <br>
+        *En lo posible (según el tipo de cuenta) tener siempre activa la autenticación de 2 pasos. 
 
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, possimus.</p>
+    </div>
 </div>
 <div class="main" id="sec4">
     <br>
     <br>
     <br>
     <br>
-    <br>
-
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, possimus.</p>
-    <footer>
-        <a href="#sec1">Volver a generar una contraseña</a>
-    </footer>
+    <div class="caja">
+        <h4><u>Tips para poder evitar el robo de contraseñas:</u></h4> <br> 
+        *El administrador de contraseñas de Google no es muy confiable que digamos... Lo mejor seria desactivarlo. <br>
+        *Cada vez que estes por entrar a alguna pagina que tengas que entrar con un usario, corrobora que el link sea el correcto. Un ejemplo: www.twiter.com ESTA MAL ESCRITO, NO ES LA PAGINA OFICIAL (Por experiencia propia, he ingresado a una copia de la pagina de steam y me han robado mi cuenta, todo por no fijarme el link de la pagina donde ingrese). <br>
+        *Intenta tener distintas contraseñas para las distintas cuentas que tengas. <br>
+        *Una buena practica es cambiar la contraseña al menos una vez al año. <br>
+        *NO ENVIES DATOS PERSONALES POR MAIL, mucha gente suele caer en estas trampas, en la cual te mandan un mail pidiendo que confirmes información, a estos mails SOLO se debe responder si su dominio es DISTINTO a @gmail.com, las empresas tienen sus propios dominios, ejemplo: pedro@mercadolibre.com.ar .
+    </div>
 </div>
+<br>
+<br>
+
+<footer id="footer">
+    <ul>
+        
+        <li><a href="mailto:juancruzbreppe@gmail.com">Email</a></li>
+        <li><a href="https://github.com/juancruzbreppe">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/juan-cruz-breppe-3417261ab/">Linkedin</a></li>
+        <li><a href="https://www.instagram.com/juancruzbreppe/">Instagram</a></li>
+        <li>
+            <p>👋</p>
+        </li>
+    </ul>
+</footer>
     <script src="script.js"></script>
 </body>
 </html>

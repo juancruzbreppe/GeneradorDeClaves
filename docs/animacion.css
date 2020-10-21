@@ -17,6 +17,98 @@ body{
   text-align: center;
 }
 
+.caja{
+  position: relative;
+  color: #ffffff; 
+  top: 18vh;
+font-size: 23px; 
+font-weight: 400; 
+text-align: justify; 
+background: #0C204E; 
+margin: 70px 70px 250px ; 
+overflow: hidden; 
+padding: 40px; 
+border-radius: 35px 0px 35px 0px; 
+-moz-border-radius: 35px 0px 35px 0px; 
+-webkit-border-radius: 35px 0px 35px 0px; 
+border: 2px solid #5878ca;
+}
+
+#footer ul{
+  display: inline-grid;
+  
+  list-style-type: none;
+  grid-auto-flow: row;
+  grid-gap: 24px;
+  justify-items: center;
+  margin: auto;
+}
+@media (min-width: 500px) {
+  #footer ul {
+    grid-auto-flow: column;
+  }
+}
+#footer a {
+  color: white;
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+}
+
+#footer a:hover {
+  box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4);
+}
+#footer li:last-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#footer li:hover ~ li p {
+  animation: wave-animation 0.3s infinite;
+}
+@keyframes wave-animation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+.btn-flotante {
+	font-size: 16px; /* Cambiar el tamaño de la tipografia */
+	text-transform: uppercase; /* Texto en mayusculas */
+	font-weight: bold; /* Fuente en negrita o bold */
+	color: #ffffff; /* Color del texto */
+	border-radius: 5px; /* Borde del boton */
+	letter-spacing: 2px; /* Espacio entre letras */
+	background-color: #0C204E; /* Color de fondo */
+	padding: 18px 30px; /* Relleno del boton */
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	transition: all 300ms ease 0ms;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  border: 2px solid #5878ca;
+}
+.btn-flotante:hover {
+  background-color: #4FD1C5; /* Color de fondo al pasar el cursor */
+  color: #000000;
+	box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
+	transform: translateY(-7px);
+}
+@media only screen and (max-width: 600px) {
+ 	.btn-flotante {
+		font-size: 14px;
+		padding: 12px 20px;
+		bottom: 20px;
+		right: 20px;
+	}
+}
 #navegador ul{
   margin-top: -25px;
   list-style-type: none;
@@ -69,8 +161,8 @@ a:link, a:visited, a:active {
 
 h6{
   position: relative;
-  top: -6%;
-  margin-left: -11%;
+  top: 27vh;
+  margin-left: 18%;
 }
 
 .wrap {
@@ -89,6 +181,7 @@ height: 100vh;
 }
 
 .button {
+  margin: 10px;
   min-width: 300px;
   min-height: 60px;
   font-size: 22px;
@@ -97,7 +190,7 @@ height: 100vh;
   font-weight: 700;
   color: #313133;
   background: #4FD1C5;
-background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px rgba(79,209,197,.64);
@@ -155,7 +248,7 @@ button:hover::after, button:focus::after {
   /*Don't really need this just for demo styling*/
   float: left;
   min-width: 180px;
-  margin: 100px 2% ;
+  margin: 10px;
 }
 
 /* IE11 hide native button (thanks Matt!) */
@@ -225,16 +318,25 @@ select{
     opacity: 0;
   }
 }
-/* Animation */
-.anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
+
+
+*::-webkit-scrollbar {
+  width: 8px;     /* Tamaño del scroll en vertical */
+  height: 8px;    /* Tamaño del scroll en horizontal */
+  display: none;  /* Ocultar scroll */
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 24em}
+
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+*::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+/* Cambiamos el fondo cuando esté en active */
+*::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
 }
